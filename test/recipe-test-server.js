@@ -55,4 +55,34 @@ describe("Recipes", function() {
             expect(res.body).to.deep.equal(Object.assign(newRecipe, {id: res.body.id}));
         });
     });
+    it("should update a recipe on PUT", function() {
+        const updateRecipe = {
+            name: "new cake",
+            ingredients: ["flour", "milk", "butter", "sugar"]
+        };
+        return chai.request(app)
+        .get("/recipes")
+        .then(function(res) {
+            updateRecipe.id = res.body[0].id;
+            return chai.request(app)
+            .put(`/recipes/${updateRecipe.id}`)
+            .send(updateRecipe);
+        })
+        .then(function(res) {
+            expect(res).to.have.status(204);
+            expect(res.body).to.be.a("object");
+            // expect(res.body).to.deep.equal(updateRecipe);
+        });
+    });
+    it("should delete a recipe on DELETE", function() {
+        return chai.request(app)
+        .get("/recipes")
+        .then(function(res) {
+            return chai.request(app)
+            .delete(`/recipes/${res.body[0].id}`);
+        })
+        .then(function(res) {
+            expect(res).to.have.status(204);
+        });
+    });
 });
