@@ -75,6 +75,8 @@ router.put("/:id", (req, res) => {
     name: req.body.name,
     ingredients: req.body.ingredients
   });
+  // const updatedRecipe = 
+  // res.status(200).json(updatedRecipe);
   res.status(204).end();
 });
 
