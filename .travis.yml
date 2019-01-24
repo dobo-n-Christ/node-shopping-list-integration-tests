@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: bnEygpWZx6qFXHZAgZBq2Z5jIGnqjLdvzJ3s+s/PVflQdbcbuQ0ctGaIhAOCZEfoANSCyBPHqcrACzGlyHII7yu9nk64CuPgMHpQ7o6njmruh5d0G+ayvf6kLAfB8v2KpEhq0F8xFWHSe2rTKavLztqa1jTLzycj9Ve6XNALYxCcwmFBr/gs1WI5JhbYVTT9UfzmnyC8+Vm76Da07jZPQ2V5zM96a4FzRUWuJLLBYO4C5yloUOCm9vnJCRQQtFSW2+75jEWtBN63lI6tYXLeKLwna0uhUdJLwqHyxmyUXmCOIdfmrLBXtkvcmJq/9CP3HsTYB17I/C2wY6wZ7ezer6E4+dfBVxJOuCekbX96dt8cXENISUXou4sbH51s21j/p+KgHinTKTs+6rbDznnLNbvuIJa58NBHYsYdL25Mn9FlYqHClheJUGKyZGc/ISKThTbeB2C5M2UhenXMM9l/XpPmBk2Va8Jrk5+F+0pryc5Rgt9Cs/oTrPPpp54Gi2gP4I8Gwp5ak+eTJ/FMCahPjIkbuoa3hVzfH92upvqVwJM50RpEi7PtnyfyIkmOduP2gMWtHqr1zXx1VXO/acE/95f0WfTFwGs9bvQYMSPeERmeAl8+2p4YpH908u6emQ/Qnlf00XZFVo53LkmGi1gm9FwI5jgKq3rxJTLoX+cNuzs=
+  app: pacific-brushlands-52379
+  on:
+    repo: dobo-n-Christ/node-shopping-list-integration-tests
